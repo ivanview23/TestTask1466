@@ -30,9 +30,9 @@ public class ParserFigure {
                 String line = scanner.nextLine();
                 String[] arg = line.split(" ");
                 String figureType = arg[0];
-                List<Integer> parameters = new ArrayList<>();
+                List<Float> parameters = new ArrayList<>();
                 for (int i = 1; i < arg.length; i++) {
-                    parameters.add(Integer.parseInt(arg[i]));
+                    parameters.add(Float.parseFloat(arg[i]));
                 }
                 try {
                     Figure figure = figureFactory.createFigure(figureType, parameters);

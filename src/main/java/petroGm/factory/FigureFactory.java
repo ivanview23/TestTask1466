@@ -7,7 +7,7 @@ import java.util.List;
 
 public class FigureFactory {
 
-    public Figure createFigure(String figureType, List<Integer> parameters) throws InvalidDataSource {
+    public Figure createFigure(String figureType, List<Float> parameters) throws InvalidDataSource {
         switch (figureType) {
             case "point":
                 return createPoint(parameters);
@@ -26,42 +26,42 @@ public class FigureFactory {
         }
     }
 
-    private Point createPoint(List<Integer> parameters) throws InvalidDataSource {
+    private Point createPoint(List<Float> parameters) throws InvalidDataSource {
         if (parameters.size() != 2) {
             throw new InvalidDataSource("invalid parameters this figure");
         }
         return new Point(parameters.get(0), parameters.get(1));
     }
 
-    private Rect createRect(List<Integer> parameters) throws InvalidDataSource {
+    private Rect createRect(List<Float> parameters) throws InvalidDataSource {
         if (parameters.size() != 4) {
             throw new InvalidDataSource("invalid parameters this figure");
         }
         return new Rect(parameters.get(0), parameters.get(1), parameters.get(2), parameters.get(3));
     }
 
-    private Rhomb createRhomb(List<Integer> parameters) throws InvalidDataSource {
+    private Rhomb createRhomb(List<Float> parameters) throws InvalidDataSource {
         if (parameters.size() != 4) {
             throw new InvalidDataSource("invalid parameters this figure");
         }
         return new Rhomb(parameters.get(0), parameters.get(1), parameters.get(2), parameters.get(3));
     }
 
-    private Square createSquare(List<Integer> parameters) throws InvalidDataSource {
+    private Square createSquare(List<Float> parameters) throws InvalidDataSource {
         if (parameters.size() != 3) {
             throw new InvalidDataSource("invalid parameters this figure");
         }
         return new Square(parameters.get(0), parameters.get(1), parameters.get(2));
     }
 
-    private Linе createLine(List<Integer> parameters) throws InvalidDataSource {
+    private Line createLine(List<Float> parameters) throws InvalidDataSource {
         if (parameters.size() != 4) {
             throw new InvalidDataSource("invalid parameters this figure");
         }
-        return new Linе(parameters.get(0), parameters.get(1), parameters.get(2), parameters.get(3));
+        return new Line(parameters.get(0), parameters.get(1), parameters.get(2), parameters.get(3));
     }
 
-    private Circle createCircle(List<Integer> parameters) throws InvalidDataSource {
+    private Circle createCircle(List<Float> parameters) throws InvalidDataSource {
         if (parameters.size() != 3) {
             throw new InvalidDataSource("invalid parameters this figure");
         }

@@ -1,6 +1,18 @@
 point 1 2
-rect 1 2 3 4
-line 10 10 20 20
+rect 1 6 14 20
+line 10 10 2 20
 circle 10 10 5
 rhomb 3 4 10 20
 square 4 6 13
+point 10 20
+point 10 2
+line 20 10 20 40
+line 10 30 30 30
+rect 7 3 4 9
+rect 3 4 2 7
+square 15 15 10
+square 5 12 10
+rhomb 14 8 6 6
+rhomb 8 7 10 4
+circle 10 10 7.072
+circle 20 20 7.071

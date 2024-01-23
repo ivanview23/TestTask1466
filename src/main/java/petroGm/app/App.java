@@ -14,13 +14,26 @@ public class App {
         ParserFigure parserFigure = new ParserFigure();
         figureList = parserFigure.perform();
 
-        for (Figure figure: figureList) {
+        for (int i = 0; i < figureList.size(); i += 2) {
+            Figure figure = figureList.get(i);
             figure.draw();
+            if(figure.getPerimeter()) {
+                figure.perimeter();
+            }
+            if (figure.getSquare()) {
+                figure.square();
+            }
+            if (i < figureList.size() - 1) {
+                Figure figurePrev = figureList.get(i + 1);
+                figurePrev.draw();
+                if (figurePrev.getPerimeter()) {
+                    figurePrev.perimeter();
+                }
+                if (figurePrev.getSquare()) {
+                    figurePrev.square();
+                }
+                figurePrev.intersect(figure);
+            }
         }
-
-
-
-
-
     }
 }
